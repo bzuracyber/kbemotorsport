@@ -222,16 +222,16 @@
   updateScrollspy();
 
   /* ── HERO PARALLAX ───────────────────────────────────────── */
-  const heroImg  = document.querySelector('.hero__img');
-  const heroEl   = document.querySelector('.hero');
+  const heroVideo = document.querySelector('.hero-video');
+  const heroEl    = document.querySelector('.hero');
 
-  if (heroImg && heroEl && window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+  if (heroVideo && heroEl && window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
     let pTick = false;
     window.addEventListener('scroll', function () {
       if (!pTick) {
         requestAnimationFrame(function () {
           if (window.scrollY < heroEl.offsetHeight) {
-            heroImg.style.transform = 'translateY(' + (window.scrollY * 0.28) + 'px)';
+            heroVideo.style.transform = 'translateY(' + (window.scrollY * 0.18) + 'px)';
           }
           pTick = false;
         });
