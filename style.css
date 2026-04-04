@@ -1285,7 +1285,7 @@ button {
     display: flex;
   }
 
-  .hero__content {
+  .hero-content {
     margin-left: 0;
     padding-inline: clamp(20px, 6vw, 40px);
     max-width: 100%;
