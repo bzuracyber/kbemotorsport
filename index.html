@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Primary SEO -->
-  <title>KBE Motorsport | European Auto Service — Mercedes-Benz Engine &amp; Transmission Specialists | Pocono Mountains, PA</title>
-  <meta name="description" content="KBE Motorsport — expert European auto service in the Pocono Mountains, PA. Engine service, transmission service, timing chain, electrical diagnosis, and complex repairs for Mercedes-Benz and European vehicles. Master-level work, no shortcuts." />
+  <title>KBE Motorsport | Mercedes-Benz Specialists — Pocono, PA</title>
+  <meta name="description" content="Expert Mercedes-Benz engine, transmission & electrical service in the Pocono Mountains, PA. Master-level European auto repair. No shortcuts." />
   <meta name="robots" content="index, follow" />
   <meta name="keywords" content="Mercedes-Benz repair Pocono Mountains, European auto service PA, engine service Pennsylvania, transmission service Pocono, Mercedes specialist near me, W124 W140 W220 repair, M104 M119 OM606 engine service, 722.6 transmission service, electrical diagnosis Mercedes, KBE Motorsport, Konrad Bzura" />
   <meta name="geo.region" content="US-PA" />
   <meta name="geo.placename" content="Pocono Mountains, Pennsylvania" />
   <link rel="canonical" href="https://kbemotorsport.com/" />
+  <link rel="icon" type="image/png" href="/logo.jpg" />
+  <link rel="apple-touch-icon" href="/logo.jpg" />
 
   <!-- Open Graph -->
   <meta property="og:type"        content="website" />
@@ -40,10 +42,12 @@
       "@type": "Person",
       "name": "Konrad Bzura"
     },
+    "telephone": "+1-570-460-3461",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Pocono Mountains",
       "addressRegion": "PA",
+      "postalCode": "18301",
       "addressCountry": "US"
     },
     "areaServed": [
@@ -87,6 +91,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1C2RNT5MXY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1C2RNT5MXY');
+  </script>
 </head>
 <body>
 
@@ -94,7 +107,10 @@
   <nav class="nav" id="nav">
     <div class="nav__inner">
       <a href="#" class="nav__logo" aria-label="KBE Motorsport">
-        <img src="images/logo.jpg" alt="KBE Motorsport — European Auto Service, Pocono Mountains PA" height="48" />
+        <picture>
+          <source srcset="images/logo.webp" type="image/webp">
+          <img src="images/logo.jpg" alt="KBE Motorsport — European Auto Service, Pocono Mountains PA" height="48" loading="lazy">
+        </picture>
       </a>
 
       <ul class="nav__links" id="navLinks">
@@ -280,7 +296,10 @@
     <!-- FEATURED BUILD -->
     <div class="featured">
       <div class="featured__image">
-        <img src="images/hero.jpg" alt="Mercedes M104 engine service in progress at KBE Motorsport — custom deep blue valve cover with red Bosch ignition coils" loading="lazy" />
+        <picture>
+          <source srcset="images/hero.webp" type="image/webp">
+          <img src="images/hero.jpg" alt="Mercedes M104 engine service in progress at KBE Motorsport — custom deep blue valve cover with red Bosch ignition coils" loading="eager" fetchpriority="high">
+        </picture>
       </div>
       <div class="featured__content">
         <p class="featured__label">Featured Build</p>
@@ -299,167 +318,266 @@
       <div class="work__grid">
 
         <button class="grid-item" data-src="images/engine-pistons.jpg" data-caption="Fresh pistons seated in the M104 block with a new red head gasket — ready for cylinder head installation.">
-          <img src="images/engine-pistons.jpg" alt="Fresh pistons and head gasket in Mercedes M104 block" loading="lazy" />
+          <picture>
+            <source srcset="images/engine-pistons.webp" type="image/webp">
+            <img src="images/engine-pistons.jpg" alt="Fresh pistons and head gasket in Mercedes M104 block" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>Fresh Pistons &amp; Head Gasket</span></div>
         </button>
 
         <button class="grid-item" data-src="images/engine-timing.jpg" data-caption="M104 engine upright on the stand — full dual-row timing chain, cam sprockets, and guides visible before cover installation.">
-          <img src="images/engine-timing.jpg" alt="Mercedes M104 timing chain assembly on engine stand" loading="lazy" />
+          <picture>
+            <source srcset="images/engine-timing.webp" type="image/webp">
+            <img src="images/engine-timing.jpg" alt="Mercedes M104 timing chain assembly on engine stand" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>Timing Chain Assembly</span></div>
         </button>
 
         <button class="grid-item" data-src="images/engine-timing-2.jpg" data-caption="M104 front end — secondary timing chain, VVT sprocket, and crank pulley. Timing set measured and verified before sealing.">
-          <img src="images/engine-timing-2.jpg" alt="Mercedes M104 timing chain and VVT sprockets" loading="lazy" />
+          <picture>
+            <source srcset="images/engine-timing-2.webp" type="image/webp">
+            <img src="images/engine-timing-2.jpg" alt="Mercedes M104 timing chain and VVT sprockets" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>Timing Chain &amp; VVT Sprockets</span></div>
         </button>
 
         <button class="grid-item" data-src="images/engine-cams.jpg" data-caption="Camshafts, followers, and valves laid out and numbered — each component inspected and measured before reassembly.">
-          <img src="images/engine-cams.jpg" alt="Mercedes M104 camshafts and valve train components laid out" loading="lazy" />
+          <picture>
+            <source srcset="images/engine-cams.webp" type="image/webp">
+            <img src="images/engine-cams.jpg" alt="Mercedes M104 camshafts and valve train components laid out" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>Camshaft &amp; Valve Train</span></div>
         </button>
 
         <button class="grid-item" data-src="images/engine-head.jpg" data-caption="Cylinder head fully assembled with dual camshafts and rocker arms — torqued, timed, and ready to drop onto the block.">
-          <img src="images/engine-head.jpg" alt="Mercedes M104 cylinder head with camshafts assembled" loading="lazy" />
+          <picture>
+            <source srcset="images/engine-head.webp" type="image/webp">
+            <img src="images/engine-head.jpg" alt="Mercedes M104 cylinder head with camshafts assembled" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>Cylinder Head Rebuild</span></div>
         </button>
 
         <button class="grid-item" data-src="images/engine-block.jpg" data-caption="M104 short block on the stand — new oil pump installed, crankshaft journals cleaned, timing side prepped for chain set.">
-          <img src="images/engine-block.jpg" alt="Mercedes M104 engine block with oil pump and crankshaft" loading="lazy" />
+          <picture>
+            <source srcset="images/engine-block.webp" type="image/webp">
+            <img src="images/engine-block.jpg" alt="Mercedes M104 engine block with oil pump and crankshaft" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>Engine Block Assembly</span></div>
         </button>
 
         <button class="grid-item" data-src="images/trans-teardown.jpg" data-caption="722.6 NAG1 transmission fully disassembled — torque converter, clutch packs, and valve body laid out on the bench.">
-          <img src="images/trans-teardown.jpg" alt="722.6 NAG1 automatic transmission full teardown" loading="lazy" />
+          <picture>
+            <source srcset="images/trans-teardown.webp" type="image/webp">
+            <img src="images/trans-teardown.jpg" alt="722.6 NAG1 automatic transmission full teardown" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>Transmission Teardown</span></div>
         </button>
 
         <button class="grid-item" data-src="images/trans-case.jpg" data-caption="722.6 transmission main case — inspected for cracks, cleaned, and prepped for reassembly with new seals and bearings.">
-          <img src="images/trans-case.jpg" alt="Mercedes 722.6 transmission case" loading="lazy" />
+          <picture>
+            <source srcset="images/trans-case.webp" type="image/webp">
+            <img src="images/trans-case.jpg" alt="Mercedes 722.6 transmission case" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>Transmission Case</span></div>
         </button>
 
         <button class="grid-item" data-src="images/trans-case-2.jpg" data-caption="Transmission bell housing — cleaned and inspected before mating back to the engine. Rear seal and bushing replaced.">
-          <img src="images/trans-case-2.jpg" alt="Mercedes 722.6 transmission case rear view" loading="lazy" />
+          <picture>
+            <source srcset="images/trans-case-2.webp" type="image/webp">
+            <img src="images/trans-case-2.jpg" alt="Mercedes 722.6 transmission case rear view" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>Transmission Case Detail</span></div>
         </button>
 
         <button class="grid-item" data-src="images/trans-valvebody.jpg" data-caption="722.6 valve body laid flat — solenoids removed, bores inspected, and passages flushed before new solenoid pack installed.">
-          <img src="images/trans-valvebody.jpg" alt="Mercedes 722.6 transmission valve body" loading="lazy" />
+          <picture>
+            <source srcset="images/trans-valvebody.webp" type="image/webp">
+            <img src="images/trans-valvebody.jpg" alt="Mercedes 722.6 transmission valve body" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>Valve Body Rebuild</span></div>
         </button>
 
         <button class="grid-item" data-src="images/trans-valvebody-2.jpg" data-caption="New shift solenoids and pressure regulators laid out alongside the valve body — replaced as a complete set, not cherry-picked.">
-          <img src="images/trans-valvebody-2.jpg" alt="Mercedes 722.6 valve body with solenoids" loading="lazy" />
+          <picture>
+            <source srcset="images/trans-valvebody-2.webp" type="image/webp">
+            <img src="images/trans-valvebody-2.jpg" alt="Mercedes 722.6 valve body with solenoids" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>Valve Body &amp; Solenoids</span></div>
         </button>
 
         <button class="grid-item" data-src="images/trans-workbench.jpg" data-caption="Full 722.6 NAG1 rebuild in progress — case, valve body, friction pack, and tools organized across the workbench.">
-          <img src="images/trans-workbench.jpg" alt="Full transmission rebuild workbench overview" loading="lazy" />
+          <picture>
+            <source srcset="images/trans-workbench.webp" type="image/webp">
+            <img src="images/trans-workbench.jpg" alt="Full transmission rebuild workbench overview" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>Full Trans Workbench</span></div>
         </button>
 
         <button class="grid-item" data-src="images/transfercase-1.jpg" data-caption="Mercedes transfer case split open — front and rear halves, chain drive, and both differential bearings exposed for inspection.">
-          <img src="images/transfercase-1.jpg" alt="Mercedes transfer case split open showing internals" loading="lazy" />
+          <picture>
+            <source srcset="images/transfercase-1.webp" type="image/webp">
+            <img src="images/transfercase-1.jpg" alt="Mercedes transfer case split open showing internals" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>Transfer Case Rebuild</span></div>
         </button>
 
         <button class="grid-item" data-src="images/transfercase-2.jpg" data-caption="Transfer case half — input shaft, carrier bearing, and seal surfaces cleaned and measured. New seals pressed before assembly.">
-          <img src="images/transfercase-2.jpg" alt="Mercedes transfer case half with bearing detail" loading="lazy" />
+          <picture>
+            <source srcset="images/transfercase-2.webp" type="image/webp">
+            <img src="images/transfercase-2.jpg" alt="Mercedes transfer case half with bearing detail" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>Transfer Case Detail</span></div>
         </button>
 
         <button class="grid-item" data-src="images/s500-front.jpg" data-caption="Mercedes S500 W220 — engine-out for service. Full documentation before teardown begins.">
-          <img src="images/s500-front.jpg" alt="Mercedes S500 W220 front end with hood up" loading="lazy" />
+          <picture>
+            <source srcset="images/s500-front.webp" type="image/webp">
+            <img src="images/s500-front.jpg" alt="Mercedes S500 W220 front end with hood up" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>Mercedes S500 W220 Front End</span></div>
         </button>
 
         <button class="grid-item" data-src="images/s500-night.jpg" data-caption="Mercedes W220 S-Class at night — in for electrical diagnosis and module replacement.">
-          <img src="images/s500-night.jpg" alt="Mercedes S500 W220 photographed at night" loading="lazy" />
+          <picture>
+            <source srcset="images/s500-night.webp" type="image/webp">
+            <img src="images/s500-night.jpg" alt="Mercedes S500 W220 photographed at night" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>Mercedes S500 W220</span></div>
         </button>
 
         <button class="grid-item" data-src="images/sl-engine.jpg" data-caption="Mercedes V8 engine bay — M119 with factory air intake system intact. Pre-inspection documentation before service.">
-          <img src="images/sl-engine.jpg" alt="Mercedes SL V8 M119 engine bay" loading="lazy" />
+          <picture>
+            <source srcset="images/sl-engine.webp" type="image/webp">
+            <img src="images/sl-engine.jpg" alt="Mercedes SL V8 M119 engine bay" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>Mercedes SL V8 Engine Bay</span></div>
         </button>
 
         <button class="grid-item" data-src="images/ml-engine.jpg" data-caption="Mercedes ML-Class in for engine service — hood up, front clip documented before work begins.">
-          <img src="images/ml-engine.jpg" alt="Mercedes ML engine bay with hood open" loading="lazy" />
+          <picture>
+            <source srcset="images/ml-engine.webp" type="image/webp">
+            <img src="images/ml-engine.jpg" alt="Mercedes ML engine bay with hood open" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>Mercedes ML Engine Bay</span></div>
         </button>
 
         <button class="grid-item" data-src="images/w124-engine.jpg" data-caption="Mercedes W124 in for a full engine-out service — timing, head gasket, and cooling system. A classic done right.">
-          <img src="images/w124-engine.jpg" alt="Mercedes W124 classic with engine removed" loading="lazy" />
+          <picture>
+            <source srcset="images/w124-engine.webp" type="image/webp">
+            <img src="images/w124-engine.jpg" alt="Mercedes W124 classic with engine removed" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>Mercedes W124 Classic</span></div>
         </button>
 
         <button class="grid-item" data-src="images/w124-engine-2.jpg" data-caption="W124 engine bay from above — everything stripped and cleaned before the rebuilt engine drops back in.">
-          <img src="images/w124-engine-2.jpg" alt="Mercedes W124 engine bay top view" loading="lazy" />
+          <picture>
+            <source srcset="images/w124-engine-2.webp" type="image/webp">
+            <img src="images/w124-engine-2.jpg" alt="Mercedes W124 engine bay top view" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>Mercedes W124 Engine Bay</span></div>
         </button>
 
         <button class="grid-item" data-src="images/w124-front.jpg" data-caption="Mercedes W124 with the hood removed — full access for engine-out service.">
-          <img src="images/w124-front.jpg" alt="Mercedes W124 with hood removed" loading="lazy" />
+          <picture>
+            <source srcset="images/w124-front.webp" type="image/webp">
+            <img src="images/w124-front.jpg" alt="Mercedes W124 with hood removed" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>Mercedes W124 Hood Off</span></div>
         </button>
 
         <button class="grid-item" data-src="images/brakes-before.jpg" data-caption="Worn brake assembly — pad material completely gone, rotor scored to the hat. This is what deferred maintenance looks like.">
-          <img src="images/brakes-before.jpg" alt="Severely worn brake rotor and caliper before service" loading="lazy" />
+          <picture>
+            <source srcset="images/brakes-before.webp" type="image/webp">
+            <img src="images/brakes-before.jpg" alt="Severely worn brake rotor and caliper before service" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>Worn Brake Rotor</span></div>
         </button>
 
         <button class="grid-item" data-src="images/brakes-after.jpg" data-caption="Old vs. new — original rotor and fresh cross-drilled rotor with new pads laid out before installation.">
-          <img src="images/brakes-after.jpg" alt="Old and new brake rotors comparison with new pads" loading="lazy" />
+          <picture>
+            <source srcset="images/brakes-after.webp" type="image/webp">
+            <img src="images/brakes-after.jpg" alt="Old and new brake rotors comparison with new pads" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>New Rotor &amp; Pads</span></div>
         </button>
 
         <button class="grid-item" data-src="images/brakes-caliper.jpg" data-caption="Brake caliper with seized piston and corroded guide pins — rebuilt and resealed before reinstallation.">
-          <img src="images/brakes-caliper.jpg" alt="Mercedes brake caliper detail" loading="lazy" />
+          <picture>
+            <source srcset="images/brakes-caliper.webp" type="image/webp">
+            <img src="images/brakes-caliper.jpg" alt="Mercedes brake caliper detail" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>Brake Caliper Detail</span></div>
         </button>
 
         <button class="grid-item" data-src="images/ecu.jpg" data-caption="Mercedes ECU (ME-SFI control module) — removed for bench testing and reprogramming. Replaced like-for-like with a verified unit.">
-          <img src="images/ecu.jpg" alt="Mercedes Benz ECU control module" loading="lazy" />
+          <picture>
+            <source srcset="images/ecu.webp" type="image/webp">
+            <img src="images/ecu.jpg" alt="Mercedes Benz ECU control module" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>ECU Replacement</span></div>
         </button>
 
         <button class="grid-item" data-src="images/fusebox.jpg" data-caption="Main fuse and relay panel — systematically tested relay-by-relay to trace an intermittent no-start and accessory fault.">
-          <img src="images/fusebox.jpg" alt="Mercedes fuse box with relays during diagnosis" loading="lazy" />
+          <picture>
+            <source srcset="images/fusebox.webp" type="image/webp">
+            <img src="images/fusebox.jpg" alt="Mercedes fuse box with relays during diagnosis" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>Fuse Box Diagnosis</span></div>
         </button>
 
         <button class="grid-item" data-src="images/fusebox-2.jpg" data-caption="Relay panel and wiring junction — factory diagram in hand, each circuit tested for proper voltage before clearing faults.">
-          <img src="images/fusebox-2.jpg" alt="Mercedes relay and fuse panel wiring" loading="lazy" />
+          <picture>
+            <source srcset="images/fusebox-2.webp" type="image/webp">
+            <img src="images/fusebox-2.jpg" alt="Mercedes relay and fuse panel wiring" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>Relay &amp; Fuse Panel</span></div>
         </button>
 
         <button class="grid-item" data-src="images/wiring-repair.jpg" data-caption="Heat-damaged wiring harness near the coolant reservoir — insulation melted, conductors exposed. Repaired with factory-spec materials.">
-          <img src="images/wiring-repair.jpg" alt="Damaged Mercedes wiring harness repaired" loading="lazy" />
+          <picture>
+            <source srcset="images/wiring-repair.webp" type="image/webp">
+            <img src="images/wiring-repair.jpg" alt="Damaged Mercedes wiring harness repaired" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>Wiring Harness Repair</span></div>
         </button>
 
         <button class="grid-item" data-src="images/scan-tool.jpg" data-caption="Full Mercedes system scan via Autel MaxiSYS — seventeen stored fault codes across six modules, all traced and resolved.">
-          <img src="images/scan-tool.jpg" alt="Autel diagnostic scanner connected to Mercedes showing fault codes" loading="lazy" />
+          <picture>
+            <source srcset="images/scan-tool.webp" type="image/webp">
+            <img src="images/scan-tool.jpg" alt="Autel diagnostic scanner connected to Mercedes showing fault codes" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>Mercedes Diagnostic Scan</span></div>
         </button>
 
         <button class="grid-item" data-src="images/wiring-diagram.jpg" data-caption="Factory Mercedes wiring schematic pulled up during electrical diagnosis — this is how you trace a fault, not by guessing.">
-          <img src="images/wiring-diagram.jpg" alt="Mercedes factory wiring diagram on screen during diagnosis" loading="lazy" />
+          <picture>
+            <source srcset="images/wiring-diagram.webp" type="image/webp">
+            <img src="images/wiring-diagram.jpg" alt="Mercedes factory wiring diagram on screen during diagnosis" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>Factory Wiring Diagnosis</span></div>
         </button>
 
         <button class="grid-item" data-src="images/exhaust-manifold.jpg" data-caption="Exhaust manifold, gaskets, and hardware removed and laid out — cracked manifold replaced with a new OEM unit.">
-          <img src="images/exhaust-manifold.jpg" alt="Mercedes exhaust manifold and components for replacement" loading="lazy" />
+          <picture>
+            <source srcset="images/exhaust-manifold.webp" type="image/webp">
+            <img src="images/exhaust-manifold.jpg" alt="Mercedes exhaust manifold and components for replacement" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>Exhaust Manifold Replacement</span></div>
         </button>
 
         <button class="grid-item" data-src="images/compression-test.jpg" data-caption="Cylinder-by-cylinder compression test before engine work — establishes a baseline and reveals any weak cylinders upfront.">
-          <img src="images/compression-test.jpg" alt="Compression test gauge on Mercedes engine" loading="lazy" />
+          <picture>
+            <source srcset="images/compression-test.webp" type="image/webp">
+            <img src="images/compression-test.jpg" alt="Compression test gauge on Mercedes engine" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>Compression Testing</span></div>
         </button>
 
         <button class="grid-item" data-src="images/suspension.jpg" data-caption="Steering knuckle removed — corroded and cracked. Replaced with a new unit, wheel bearing pressed, and hub torqued to spec.">
-          <img src="images/suspension.jpg" alt="Mercedes steering knuckle and hub removed for replacement" loading="lazy" />
+          <picture>
+            <source srcset="images/suspension.webp" type="image/webp">
+            <img src="images/suspension.jpg" alt="Mercedes steering knuckle and hub removed for replacement" loading="lazy">
+          </picture>
           <div class="grid-item__caption"><span>Suspension Components</span></div>
         </button>
 
@@ -557,6 +675,14 @@
         <p class="contact__sub">Describe your issue and we'll get back to you within 24 hours.</p>
 
         <ul class="contact__details">
+          <li class="contact__detail">
+            <span class="contact__detail-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </span>
+            <a href="tel:+1-570-460-3461" style="color: inherit;">(570) 460-3461</a>
+          </li>
           <li class="contact__detail">
             <span class="contact__detail-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -673,7 +799,10 @@
       <div class="container footer__inner">
         <div class="footer__left">
           <a href="#" class="footer__logo" aria-label="KBE Motorsport">
-            <img src="images/logo.jpg" alt="KBE Motorsport — European Auto Service, Pocono Mountains PA" height="56" />
+            <picture>
+              <source srcset="images/logo.webp" type="image/webp">
+              <img src="images/logo.jpg" alt="KBE Motorsport — European Auto Service, Pocono Mountains PA" height="56" loading="lazy">
+            </picture>
           </a>
           <p class="footer__location">Pocono Mountains, PA</p>
         </div>
