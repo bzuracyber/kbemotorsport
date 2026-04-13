@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(npm install:*)",
-      "Bash(node:*)"
+      "Bash(node:*)",
+      "Bash(grep -E '\\\\.\\(jpg|jpeg|png|webp\\)$')",
+      "Bash(awk '{print $9, $5}')"
     ]
   }
 }

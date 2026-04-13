@@ -892,6 +892,10 @@ button {
   border-color: var(--color-accent);
 }
 
+.phone-link {
+  color: inherit;
+}
+
 .contact__note {
   font-size: 13px;
   line-height: 1.6;
