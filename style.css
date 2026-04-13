@@ -376,12 +376,19 @@ button {
   color: #fff;
 }
 
-/* Instagram badge — bottom left */
-.hero__instagram {
+/* Social badges — bottom right */
+.hero__socials {
   position: absolute;
   bottom: clamp(28px, 5vh, 48px);
   right: clamp(20px, 5vw, 60px);
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.hero__social-link {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -391,7 +398,7 @@ button {
   transition: color var(--transition-base);
 }
 
-.hero__instagram:hover {
+.hero__social-link:hover {
   color: var(--color-accent);
 }
 
@@ -1205,7 +1212,7 @@ button {
   .hero__actions {
     animation: heroFadeIn 0.6s ease 1.0s both;
   }
-  .hero__instagram {
+  .hero__socials {
     animation: heroFadeIn 0.6s ease 1.25s both;
   }
 }
@@ -1332,12 +1339,12 @@ button {
 }
 
 @media (max-width: 480px) {
-  .hero__instagram {
+  .hero__socials {
     right: 20px;
     bottom: 20px;
   }
 
-  .hero__instagram span {
+  .hero__social-link span {
     display: none;
   }
 }
