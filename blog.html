@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | KBE Motorsport — Mercedes-Benz &amp; European Auto Repair Pocono Mountains PA</title>
+  <meta name="description" content="Expert insights on Mercedes-Benz maintenance, engine service, transmission repair, and European auto ownership in the Pocono Mountains, PA. Written by Konrad Bzura, European automotive specialist." />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="Mercedes-Benz maintenance tips, European car repair blog, Mercedes engine problems, M104 engine service, 722.6 transmission, Pocono Mountains auto repair blog, KBE Motorsport blog" />
+  <link rel="canonical" href="https://kbemotorsport.com/blog.html" />
+  <link rel="icon" type="image/png" href="/logo.jpg" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kbemotorsport.com/blog.html" />
+  <meta property="og:title" content="Blog — KBE Motorsport Mercedes-Benz Specialists" />
+  <meta property="og:description" content="Expert articles on Mercedes-Benz service, common problems, and European auto ownership in the Pocono Mountains, PA." />
+  <meta property="og:image" content="https://kbemotorsport.com/images/hero.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-hero {
+      position: relative;
+      padding-top: calc(var(--nav-height) + clamp(60px, 10vw, 100px));
+      padding-bottom: clamp(60px, 10vw, 100px);
+      background: var(--color-bg);
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 80% 50%, rgba(200,160,0,0.06) 0%, transparent 70%),
+        repeating-linear-gradient(45deg, rgba(200,160,0,0.02) 0, rgba(200,160,0,0.02) 1px, transparent 1px, transparent 40px),
+        repeating-linear-gradient(-45deg, rgba(200,160,0,0.02) 0, rgba(200,160,0,0.02) 1px, transparent 1px, transparent 40px);
+      pointer-events: none;
+    }
+    .page-hero__inner { position: relative; z-index: 1; }
+    .page-hero__eyebrow { font-family: var(--font-heading); font-size: 13px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 20px; }
+    .page-hero__heading { font-family: var(--font-heading); font-size: clamp(48px, 7vw, 88px); font-weight: 700; line-height: 0.95; color: var(--color-text); margin-bottom: 24px; letter-spacing: -0.01em; }
+    .page-hero__heading em { color: var(--color-accent); font-style: italic; }
+    .page-hero__sub { font-size: clamp(15px, 1.5vw, 18px); color: var(--color-muted); max-width: 600px; line-height: 1.7; }
+
+    /* ── BLOG GRID ── */
+    .blog-section {
+      background: var(--color-surface);
+      padding-block: var(--section-pad);
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--color-border);
+      border: 1px solid var(--color-border);
+      margin-top: clamp(40px, 6vw, 64px);
+    }
+
+    /* Featured post spans 2 columns */
+    .blog-card--featured {
+      grid-column: span 2;
+    }
+
+    .blog-card {
+      background: var(--color-surface);
+      display: flex;
+      flex-direction: column;
+      transition: background var(--transition-base);
+      position: relative;
+    }
+
+    .blog-card:hover {
+      background: var(--color-surface-2);
+    }
+
+    .blog-card__link {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .blog-card__body {
+      padding: 32px 28px 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      border-top: 2px solid transparent;
+      transition: border-color var(--transition-slow);
+    }
+
+    .blog-card:hover .blog-card__body {
+      border-top-color: var(--color-accent);
+    }
+
+    .blog-card__tag {
+      font-family: var(--font-heading);
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+    }
+
+    .blog-card__title {
+      font-family: var(--font-heading);
+      font-size: clamp(18px, 2vw, 22px);
+      font-weight: 700;
+      color: var(--color-text);
+      line-height: 1.15;
+      text-transform: uppercase;
+      letter-spacing: 0.01em;
+      transition: color var(--transition-base);
+    }
+
+    .blog-card--featured .blog-card__title {
+      font-size: clamp(24px, 3vw, 32px);
+    }
+
+    .blog-card:hover .blog-card__title {
+      color: var(--color-accent);
+    }
+
+    .blog-card__excerpt {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--color-muted);
+      flex: 1;
+    }
+
+    .blog-card__meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--color-border);
+      font-size: 12px;
+      color: var(--color-muted);
+      letter-spacing: 0.03em;
+    }
+
+    .blog-card__readmore {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-top: auto;
+      padding-top: 16px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ── NEWSLETTER / CTA STRIP ── */
+    .cta-strip { background: var(--color-accent); padding: clamp(40px, 6vw, 72px) 0; }
+    .cta-strip__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+    .cta-strip__text { font-family: var(--font-heading); font-size: clamp(24px, 3vw, 36px); font-weight: 700; color: #000; line-height: 1.1; letter-spacing: -0.01em; }
+    .cta-strip__text span { display: block; font-size: clamp(14px, 1.4vw, 16px); font-family: var(--font-body); font-weight: 500; color: rgba(0,0,0,0.65); letter-spacing: 0; margin-top: 6px; }
+    .btn--dark { background: #000; color: var(--color-accent); }
+    .btn--dark:hover { background: #111; transform: translateY(-1px); box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+
+    @media (max-width: 1024px) {
+      .blog-grid { grid-template-columns: repeat(2, 1fr); }
+      .blog-card--featured { grid-column: span 2; }
+    }
+    @media (max-width: 768px) {
+      .blog-grid { grid-template-columns: 1fr; }
+      .blog-card--featured { grid-column: span 1; }
+      .cta-strip__inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1C2RNT5MXY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1C2RNT5MXY');
+  </script>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="KBE Motorsport — Home">
+        <picture>
+          <source srcset="images/logo.webp" type="image/webp">
+          <img src="images/logo.jpg" alt="KBE Motorsport" height="48" loading="lazy">
+        </picture>
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html#services" class="nav__link">Services</a></li>
+        <li><a href="index.html#work" class="nav__link">Work</a></li>
+        <li><a href="service-areas.html" class="nav__link">Service Areas</a></li>
+        <li><a href="faq.html" class="nav__link">FAQ</a></li>
+        <li><a href="blog.html" class="nav__link nav__link--active">Blog</a></li>
+        <li><a href="index.html#reviews" class="nav__link">Reviews</a></li>
+        <li><a href="index.html#contact" class="nav__link">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__drawer" id="navDrawer" aria-hidden="true">
+      <ul class="nav__drawer-links">
+        <li><a href="index.html#services" class="nav__drawer-link">Services</a></li>
+        <li><a href="index.html#work" class="nav__drawer-link">Work</a></li>
+        <li><a href="service-areas.html" class="nav__drawer-link">Service Areas</a></li>
+        <li><a href="faq.html" class="nav__drawer-link">FAQ</a></li>
+        <li><a href="blog.html" class="nav__drawer-link">Blog</a></li>
+        <li><a href="index.html#reviews" class="nav__drawer-link">Reviews</a></li>
+        <li><a href="index.html#contact" class="nav__drawer-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <p class="page-hero__eyebrow">Knowledge &amp; Expertise</p>
+      <h1 class="page-hero__heading">The KBE<br /><em>Motorsport Blog</em></h1>
+      <p class="page-hero__sub">Technical insights, ownership tips, and honest advice about Mercedes-Benz and European vehicles — from a specialist who works on them every day in the Pocono Mountains, PA.</p>
+    </div>
+  </section>
+
+  <!-- BLOG GRID -->
+  <section class="blog-section">
+    <div class="container">
+      <div class="section__header reveal">
+        <p class="section__label">Recent Articles</p>
+        <h2 class="section__heading">Expert Guidance.<br /><em>No Filler.</em></h2>
+      </div>
+
+      <div class="blog-grid">
+
+        <!-- FEATURED -->
+        <article class="blog-card blog-card--featured reveal">
+          <a href="blog/mercedes-timing-chain.html" class="blog-card__link">
+            <div class="blog-card__body">
+              <p class="blog-card__tag">Engine · Featured</p>
+              <h2 class="blog-card__title">Signs Your Mercedes Timing Chain Needs Replacement — And What Happens If You Wait</h2>
+              <p class="blog-card__excerpt">The timing chain is the heartbeat of your Mercedes engine. When it starts to fail — stretched links, worn guides, weak tensioners — the symptoms are easy to dismiss. Until they're not. This is what you need to know before a rattle turns into an engine-out repair.</p>
+              <span class="blog-card__readmore">Read Article &rarr;</span>
+              <div class="blog-card__meta">
+                <span>Engine Service</span>
+                <span>&middot;</span>
+                <span>M104 · M119 · M272</span>
+                <span>&middot;</span>
+                <span>8 min read</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article class="blog-card reveal">
+          <a href="blog/mercedes-722-6-transmission.html" class="blog-card__link">
+            <div class="blog-card__body">
+              <p class="blog-card__tag">Transmission</p>
+              <h2 class="blog-card__title">The Mercedes 722.6 Transmission: Common Problems Every Owner Should Know</h2>
+              <p class="blog-card__excerpt">The 722.6 NAG1 is fitted to nearly every Mercedes-Benz from the late 1990s through the 2010s. It's a solid gearbox — when serviced. Neglect it and the symptoms are predictable. Here's what to watch for.</p>
+              <span class="blog-card__readmore">Read Article &rarr;</span>
+              <div class="blog-card__meta">
+                <span>Transmission</span>
+                <span>&middot;</span>
+                <span>6 min read</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article class="blog-card reveal">
+          <a href="blog/mercedes-check-engine-light.html" class="blog-card__link">
+            <div class="blog-card__body">
+              <p class="blog-card__tag">Diagnostics</p>
+              <h2 class="blog-card__title">Why Your Mercedes Check Engine Light Is On: The 8 Most Common Causes</h2>
+              <p class="blog-card__excerpt">A check engine light on a Mercedes doesn't always mean a catastrophe — but it does mean the car is telling you something. Here are the most common causes we find in the shop, from the simple to the serious.</p>
+              <span class="blog-card__readmore">Read Article &rarr;</span>
+              <div class="blog-card__meta">
+                <span>Diagnostics</span>
+                <span>&middot;</span>
+                <span>5 min read</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article class="blog-card reveal">
+          <a href="blog/dealer-vs-independent-mercedes.html" class="blog-card__link">
+            <div class="blog-card__body">
+              <p class="blog-card__tag">Ownership</p>
+              <h2 class="blog-card__title">Mercedes Dealership vs. Independent Specialist: Which Is Actually Better?</h2>
+              <p class="blog-card__excerpt">Dealerships have the brand name. Independent specialists have the focus, lower rates, and often deeper model-specific knowledge. Here's an honest breakdown of what you actually get with each option.</p>
+              <span class="blog-card__readmore">Read Article &rarr;</span>
+              <div class="blog-card__meta">
+                <span>Ownership</span>
+                <span>&middot;</span>
+                <span>7 min read</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article class="blog-card reveal">
+          <a href="blog/mercedes-engine-lifespan.html" class="blog-card__link">
+            <div class="blog-card__body">
+              <p class="blog-card__tag">Engine</p>
+              <h2 class="blog-card__title">How Long Do Mercedes-Benz Engines Actually Last?</h2>
+              <p class="blog-card__excerpt">The M104 has been documented past 400,000 miles. The OM606 diesel is legendary for longevity. But engine life isn't just about the design — it's about what happens in the first 100,000 miles. Here's the honest answer.</p>
+              <span class="blog-card__readmore">Read Article &rarr;</span>
+              <div class="blog-card__meta">
+                <span>Engine · M104 · OM606</span>
+                <span>&middot;</span>
+                <span>6 min read</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article class="blog-card reveal">
+          <a href="blog/mercedes-pre-purchase-inspection.html" class="blog-card__link">
+            <div class="blog-card__body">
+              <p class="blog-card__tag">Buying Guide</p>
+              <h2 class="blog-card__title">Pre-Purchase Inspection: The One Thing You Must Do Before Buying a Used Mercedes</h2>
+              <p class="blog-card__excerpt">Used Mercedes-Benz vehicles can be exceptional values — or expensive traps. The difference between the two is almost always a thorough pre-purchase inspection. Here's what it involves and why it matters.</p>
+              <span class="blog-card__readmore">Read Article &rarr;</span>
+              <div class="blog-card__meta">
+                <span>Buying Guide</span>
+                <span>&middot;</span>
+                <span>6 min read</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article class="blog-card reveal">
+          <a href="blog/mercedes-w220-common-problems.html" class="blog-card__link">
+            <div class="blog-card__body">
+              <p class="blog-card__tag">Model Guide · W220</p>
+              <h2 class="blog-card__title">Mercedes W220 S-Class: Every Common Problem You Need to Know About</h2>
+              <p class="blog-card__excerpt">The W220 S-Class (1999–2005) is one of the most technologically advanced cars of its era. It's also one of the most complex to maintain. Air suspension, ABC, SBC — here's what to watch for and how to stay ahead of it.</p>
+              <span class="blog-card__readmore">Read Article &rarr;</span>
+              <div class="blog-card__meta">
+                <span>Model Guide · W220</span>
+                <span>&middot;</span>
+                <span>8 min read</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article class="blog-card reveal">
+          <a href="blog/mercedes-electrical-problems.html" class="blog-card__link">
+            <div class="blog-card__body">
+              <p class="blog-card__tag">Electrical</p>
+              <h2 class="blog-card__title">Mercedes-Benz Electrical Problems: The Most Common Issues and How They Get Fixed</h2>
+              <p class="blog-card__excerpt">European electrical systems are sophisticated. When something goes wrong, the symptoms can be baffling — multiple warning lights, random faults, intermittent failures. Here's how a specialist actually diagnoses and fixes them.</p>
+              <span class="blog-card__readmore">Read Article &rarr;</span>
+              <div class="blog-card__meta">
+                <span>Electrical · Diagnostics</span>
+                <span>&middot;</span>
+                <span>7 min read</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article class="blog-card reveal">
+          <a href="blog/mercedes-cooling-system.html" class="blog-card__link">
+            <div class="blog-card__body">
+              <p class="blog-card__tag">Maintenance</p>
+              <h2 class="blog-card__title">Mercedes Cooling System: Why It Fails and How to Prevent It</h2>
+              <p class="blog-card__excerpt">Mercedes cooling systems are well-engineered but have known weak points — plastic expansion tanks, aging thermostat housings, and water pumps that fail without warning. An overheating Mercedes can destroy an otherwise healthy engine. Here's how to stay ahead of it.</p>
+              <span class="blog-card__readmore">Read Article &rarr;</span>
+              <div class="blog-card__meta">
+                <span>Maintenance · Cooling</span>
+                <span>&middot;</span>
+                <span>5 min read</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article class="blog-card reveal">
+          <a href="blog/mercedes-w124-ownership.html" class="blog-card__link">
+            <div class="blog-card__body">
+              <p class="blog-card__tag">Classic Mercedes · W124</p>
+              <h2 class="blog-card__title">Why the W124 Mercedes Is One of the Best Cars Ever Built — And How to Keep It That Way</h2>
+              <p class="blog-card__excerpt">The W124 was Mercedes-Benz at its engineering peak. Built with a level of over-engineering that's never been repeated, these cars routinely hit 300,000 miles with proper care. Here's what ownership really looks like.</p>
+              <span class="blog-card__readmore">Read Article &rarr;</span>
+              <div class="blog-card__meta">
+                <span>Classic · W124 · M104 · OM606</span>
+                <span>&middot;</span>
+                <span>9 min read</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-strip">
+    <div class="container">
+      <div class="cta-strip__inner">
+        <div class="cta-strip__text">
+          Have a question about your Mercedes?
+          <span>Call us, text us, or send a message — we'll give you a straight answer.</span>
+        </div>
+        <div style="display:flex; gap: 16px; flex-wrap: wrap; align-items: center;">
+          <a href="tel:+1-570-460-3461" class="btn btn--dark">(570) 460-3461</a>
+          <a href="index.html#contact" class="btn btn--dark">Get a Quote &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="container footer__inner">
+        <div class="footer__left">
+          <a href="index.html" class="footer__logo" aria-label="KBE Motorsport">
+            <picture>
+              <source srcset="images/logo.webp" type="image/webp">
+              <img src="images/logo.jpg" alt="KBE Motorsport — European Auto Service, Pocono Mountains PA" height="56" loading="lazy">
+            </picture>
+          </a>
+          <p class="footer__location">Pocono Mountains, PA · (570) 460-3461</p>
+          <nav class="footer__nav" aria-label="Footer navigation">
+            <a href="service-areas.html" class="footer__nav-link">Service Areas</a>
+            <a href="faq.html" class="footer__nav-link">FAQ</a>
+            <a href="blog.html" class="footer__nav-link">Blog</a>
+            <a href="index.html#contact" class="footer__nav-link">Get a Quote</a>
+          </nav>
+        </div>
+        <div class="footer__right">
+          <a href="https://www.instagram.com/kbe.motorsport/" target="_blank" rel="nofollow noopener noreferrer" class="footer__ig" aria-label="KBE Motorsport on Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            <span>@kbe.motorsport</span>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61573244856564" target="_blank" rel="nofollow noopener noreferrer" class="footer__ig" aria-label="KBE Motorsport on Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            <span>Facebook</span>
+          </a>
+          <p class="footer__caption">Master-level work.<br />No shortcuts. No guesswork.</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <div class="container">
+        <p>&copy; 2025 KBE Motorsport &middot; Konrad Bzura &middot; All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    'use strict';
+    const nav = document.getElementById('nav');
+    const hamburger = document.getElementById('hamburger');
+    const navDrawer = document.getElementById('navDrawer');
+    const drawerLinks = navDrawer.querySelectorAll('.nav__drawer-link');
+    function openMenu() { hamburger.classList.add('open'); hamburger.setAttribute('aria-expanded','true'); navDrawer.classList.add('open'); navDrawer.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
+    function closeMenu() { hamburger.classList.remove('open'); hamburger.setAttribute('aria-expanded','false'); navDrawer.classList.remove('open'); navDrawer.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+    hamburger.addEventListener('click', function(){ hamburger.classList.contains('open') ? closeMenu() : openMenu(); });
+    drawerLinks.forEach(function(l){ l.addEventListener('click', closeMenu); });
+    document.addEventListener('click', function(e){ if(!nav.contains(e.target)) closeMenu(); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeMenu(); });
+
+    const revealEls = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        const pending = Array.from(entry.target.parentElement.querySelectorAll('.reveal:not(.visible)'));
+        const idx = pending.indexOf(entry.target);
+        setTimeout(function () { entry.target.classList.add('visible'); }, Math.min(idx * 70, 280));
+        obs.unobserve(entry.target);
+      });
+    }, { threshold: 0.07, rootMargin: '0px 0px -36px 0px' });
+    revealEls.forEach(function (el) { el.classList.add('reveal'); obs.observe(el); });
+  })();
+  </script>
+</body>
+</html>
